@@ -40,13 +40,13 @@
         }
     };
 
-        $("#taskInput").on("keyup", function(e) {
-            if (e.which === 13) {
-                addTask($(this).val());
-                renderTasks();
-                var value = $(this).val("");
-            }
-        });
+    $("#taskInput").on("keyup", function(e) {
+        if (e.which === 13) {
+            addTask($(this).val());
+            renderTasks();
+            var value = $(this).val("");
+        }
+    });
 
 
     function getTaskById(id) {
@@ -69,14 +69,14 @@
         saveTolocalStorage();
 
     }
-//button-all-checked
+    //button-all-checked
     function checkAllComplete(checked) {
         for (var i = 0; i < tasks.length; i++) {
             tasks[i].completed = checked;
 
         }
     }
-//button-close
+    //button-close
     function removeTask(id) {
         for (var i = 0; i < tasks.length; i++) {
             if (tasks[i].id === parseInt(id)) {
@@ -84,7 +84,7 @@
             }
         }
     }
-//contenteditable(true)-save
+    //contenteditable(true)-save
     function saveEdits(value, id) {
         for (var i = 0; i < tasks.length; i++) {
             if (tasks[i].id === id) {
